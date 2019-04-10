@@ -1,0 +1,29 @@
+{
+    "name": "gekko/helpers",
+    "version": "0.1.0",
+    "description": "The Gekko Framework helper libraries.",
+    "license": "MIT",
+    "homepage": "https://github.com/gekko-framework",
+    "authors": [
+        {
+            "name": "Leonardo Brugnara",
+            "email": "lfbrugnara@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Gekko\\": "src/"
+        }
+    },
+    "scripts": {
+        "run-tests": [
+            "phpunit --bootstrap vendor/autoload.php tests --testdox"
+        ]
+    }
+}

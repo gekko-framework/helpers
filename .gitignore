@@ -1,0 +1,9 @@
+.vscode/
+.*.php
+.logs/*
+.tmp/*
+.env
+
+composer.lock
+vendor/
+.phpunit*
