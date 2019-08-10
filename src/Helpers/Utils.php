@@ -38,6 +38,23 @@ class Utils
         }
     }
 
+    public static function deleteDirectory(string $path)
+    {
+        if (\is_file($path))
+        {
+            \unlink($path);
+            return;
+        }
+        
+        $files = array_diff(scandir($path), array('.','..')); 
+        
+        foreach ($files as $file) {
+            self::deleteDirectory(self::path($path, $file));
+        }
+
+        rmdir($path);
+    }
+
     public static function echopre()
     {
         $messages = func_get_args();
